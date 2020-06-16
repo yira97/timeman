@@ -1,0 +1,13 @@
+{
+  "db": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "user": "nakama",
+    "password": "nakama",
+    "database": "nakama"
+  },
+  "server": {
+    "mode": 0,
+    "port": 54431
+  }
+}

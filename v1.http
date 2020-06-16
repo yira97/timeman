@@ -1,0 +1,45 @@
+
+
+###
+POST http://localhost:54431/v1/timeman/create-task-map
+Content-Type: application/json
+
+{
+  "name": "hello_1"
+}
+
+> {%
+client.test("create-task-map", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+###
+
+POST http://localhost:54431/v1/timeman/update-task-map-name
+Content-Type: application/json
+
+{
+  "name": "hello_2",
+  "id": 1
+}
+
+> {%
+client.test("update-task-map-name", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+###
+
+
+GET http://localhost:54431/v1/timeman/get-task-map-list?page=1&page_size=20
+
+> {%
+client.test("get-task-map-list", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
+###
+
